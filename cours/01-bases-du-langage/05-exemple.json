@@ -1,0 +1,33 @@
+{
+    "etudiants": [
+        {
+        "id": 1,
+        "nom": "Alice",
+        "age": 22,
+        "cours": ["Informatique", "Mathématiques", "Physique"]
+        },
+        {
+            "id": 2,
+            "nom": "Bob",
+            "age": 24,
+            "cours": ["Histoire", "Sport", "Littérature"]
+        },
+        {
+            "id": 3,
+            "nom": "Léo",
+            "age": 19,
+            "cours": ["Histoire", "Sport", "Littérature"]
+        }        
+    ],
+    "cours": {
+        "Informatique": {
+            "professeur": "M.Dupont",
+            "salle": "B1"
+        },
+        "Histoire": {
+            "professeur": "Mme.Doe",
+            "salle": "C12"
+        }
+        // [...]
+    }
+}
