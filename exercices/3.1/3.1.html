@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple de manipulation du DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        #Titre {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        #idImage {
+            max-width: 100%;
+            height: auto;
+            max-height: 300px; /* Taille maximale pour l'image */
+        }
+
+        #Paragraphe1 {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ddd; /* Couleur de fond initiale pour le paragraphe */
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="Titre">Titre Original</h1>
+
+<img id="idImage" src="images/chaton.jpg" alt="Image d'un chaton">
+
+<p id="Paragraphe1">Ceci est un paragraphe dont la couleur de fond sera changée.</p>
+
+</body>
+</html>
