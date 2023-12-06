@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+</head>
+<body>
+    <form id="formulaire">
+        <!-- Champ de texte -->
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br>
+        <!-- Liste déroulante -->
+        <label for="selection">Sélectionnez une option :</label>
+        <select id="selection" name="selection">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select><br>
+        <!-- Cases à cocher -->
+        <label><input type="checkbox" name="check1"> Case 1</label>
+        <label><input type="checkbox" name="check2"> Case 2</label><br>
+        <!-- Boutons radio -->
+        <label><input type="radio" name="radio" value="radio1"> Radio 1</label>
+        <label><input type="radio" name="radio" value="radio2"> Radio 2</label><br>
+        <!-- Bouton -->
+        <button type="submit">Envoyer</button>
+    </form>
+    <script src="01-formulaire.js"></script>
+</body>
+</html>
