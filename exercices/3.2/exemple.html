@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple de manipulation du DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        #Titre {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        #idImage {
+            max-width: 100%;
+            height: auto;
+            max-height: 300px;
+            /* Taille maximale pour l'image */
+        }
+
+        #Paragraphe1 {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ddd;
+            /* Couleur de fond initiale pour le paragraphe */
+        }
+
+        /* .fondRouge {
+            background-color: red;
+            color: red;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <h1 id="Titre">Titre Original</h1>
+
+    <img id="idImage" src="images/chaton.jpg" alt="Image d'un chaton">
+
+    <p id="Paragraphe1">Ceci est un paragraphe dont la couleur de fond sera changée.</p>
+    <p id="Paragraphe2">Paragraphe 2</p>
+    <p id="Paragraphe3">Paragraphe 3</p>
+
+    <script>
+        // this : élément selon le contexte
+        // Attention, un cas particulier : dans les fonctions anonymes this ne fonctionne pas.
+        // document.getElementById("Titre").addEventListener("click", function() {this.textContent = "Nouveau titre"});
+        const titre = document.getElementById("Titre");
+        titre.addEventListener("click", () => { titre.textContent = "Nouveau titre" });
+
+        const image = document.getElementById("idImage");
+        // image.addEventListener("click", () => {
+        //     image.src = "images/chiot.jpg";
+        //     image.alt = "Image d'un chiot";
+        //     });
+
+        // Chiot en chaton et vice versa
+        // image.addEventListener("click", () => {
+        //     if (image.src.endsWith("chaton.jpg")){
+        //         image.src = "images/chiot.jpg";
+        //         image.alt = "Image d'un chiot";
+        //     } else {
+        //         image.src = "images/chaton.jpg";
+        //         image.alt = "Image d'un chaton"
+        //     }
+        // })
+        image.addEventListener("mouseover", () => {
+            image.src = "images/chiot.jpg";
+            image.alt = "Image d'un chiot";
+        })
+
+        image.addEventListener("mouseout", () => {
+            image.src = "images/chaton.jpg";
+            image.alt = "Image d'un chaton"
+        })
+
+        // Tous les éléments p et afficher
+        // let elementsParBalise = document.querySelectorAll("p");
+        // console.log(elementsParBalise)
+        // elementsParBalise.forEach(element => {
+        //     console.log(element.textContent);
+        // });
+
+        let elementsParBalise = document.getElementsByTagName("p");
+       for (let i = 0; i < elementsParBalise.length; i++) {
+        console.log(elementsParBalise[i].textContent);
+       }
+    </script>
+</body>
+
+</html>

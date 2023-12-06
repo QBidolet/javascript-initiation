@@ -24,4 +24,5 @@ element.setAttribute("style", "color: green; border: 1px solid black;");
 
 // getComputedStyle pour obtenir tous les styles appliqués à l'élément.
 let styles = window.getComputedStyle(element);
+console.log(styles.backgroundColor);
 console.log("Hauteur :", styles.height);

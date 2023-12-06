@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page des Couleurs</title>
+    <style>
+        .couleur {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        #div1 { background-color: red; }
+        #div2 { background-color: green; }
+        #div3 { background-color: blue; }
+    </style>
+</head>
+<body>
+
+<h1>Cliquez sur un carré pour changer la couleur</h1>
+<div id="div1" class="couleur"></div>
+<div id="div2" class="couleur"></div>
+<div id="div3" class="couleur"></div>
+
+<span id="idSpan">Rien!</span>
+
+<p>Paragraphe 1</p>
+<p>Paragraphe 2</p>
+<p>Paragraphe 3</p>
+<script>
+    // 1ere étape : récupérer toutes les div via du code js.
+    const divs = document.getElementsByClassName("couleur");
+    console.log(divs);
+
+    // 2ème étape : ajouter les écoutes d'événements à ces éléments donc faire la fonction
+    // qui va être appelé lors du déclenchement de l'événement.
+    // Pour avoir la couleur du background, bien utiliser window.getComputedStyle( nomElement )
+    // 2.5 étape : Changer le span selon le background color de la case cliqué.
+
+    function changeSpanText(text){
+        const span = document.getElementById("idSpan");
+        span.textContent = text;
+        span.style.color = text;
+    }
+
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].addEventListener("click", () => {
+            const style = window.getComputedStyle(divs[i]);
+            changeSpanText(style.backgroundColor);
+        } )
+    }
+    
+</script>
+<!-- <script src="3.2.js"></script> -->
+</body>
+</html>

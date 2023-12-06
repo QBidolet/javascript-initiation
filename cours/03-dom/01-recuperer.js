@@ -23,3 +23,10 @@ console.log(tousElementsParSelecteur);
 
 // Toutes ces méthodes sont intégrés directement dans le langage
 // et ne nécessite pas de bibliothèque externe comme JQuery.
+
+
+// getElementBy... renvoit toujours un HTMLElement
+// https://developer.mozilla.org/fr/docs/Web/API/HTMLElement
+
+// querySelectorAll renvoit toujours un NodeList
+// https://developer.mozilla.org/fr/docs/Web/API/NodeList
