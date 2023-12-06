@@ -1,6 +1,6 @@
 // class a été introduit avec ES6
 
-class Personne {
+export class Personne {
     // Le constructeur : fonction pour initialiser un objet.
     constructor(nom, prenom="Toto", age=30) {
         this.nom = nom;
@@ -19,7 +19,7 @@ johnDoe.sePresenter();
 
 
 // extends pour hériter
-class Employe extends Personne {
+export class Employe extends Personne {
     constructor(nom, prenom, age, poste) {
         super(nom, prenom, age);
         this.poste = poste;
@@ -35,3 +35,4 @@ console.log(smith);
 smith.sePresenter();
 
 
+export default Personne;
